@@ -116,8 +116,7 @@ permalink: /
 	}
 	img {
 		opacity: 1 !important;
-		max-width: 25%
-		max-height: auto;
+		max-width: 40%;
 		z-index: 1;
 	}
 </style>

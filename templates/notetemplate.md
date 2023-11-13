@@ -2,7 +2,7 @@
 title: 
 excerpt: 
 tags: 
-date: <% tp.file.last_modified_date("YYYY-MM-DD") %>
+date: 
 ---
-
+<% tp.file.last_modified_date("YYYY-MM-DD") %>
 ### Introduction

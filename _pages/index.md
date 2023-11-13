@@ -82,6 +82,7 @@ permalink: /
 	#menu-items:hover ~ #menu-background-image {
 	  background-size: 100vmax;
 	  opacity: 0.6;
+	  background-color: black;
 	}
 	
 	#menu-items:hover > .menu-item {
@@ -96,8 +97,8 @@ permalink: /
 	  cursor: pointer;
 	  display: block;
 	  font-family: 'Ibarra Real Nova', serif;
-	  font-size: clamp(3rem, 8vw, 8rem);
-	  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+	  font-size: clamp(3rem, 5vw, 4rem);
+	  padding: clamp(0.25rem, 0.2vw, 1rem) 0rem;
 	  transition: opacity 400ms ease;
 	}
 	
@@ -105,5 +106,8 @@ permalink: /
 		color: white;
 		text-decoration: none;
 	}
-	body {  overflow: hidden; /* Hide scrollbars */}
+	body { 
+		overflow: hidden; /* Hide scrollbars */
+		margin: 0px;
+	}
 </style>

@@ -63,7 +63,7 @@ permalink: /
 	}
 	
 	#menu-background-image {
-	  background-image: url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
 	  background-position: center 40%;
 	  background-size: 110vmax;
 	  background-color: black;
@@ -108,6 +108,6 @@ permalink: /
 	}
 	body { 
 		overflow: hidden; /* Hide scrollbars */
-		margin: 0px;
+		margin: 0px !important;
 	}
 </style>

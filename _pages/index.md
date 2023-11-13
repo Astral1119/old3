@@ -35,7 +35,61 @@ This is a digital garden meant to serve as both a personal blog and a resource f
 </ul>
 
 <style>
-  .wrapper {
-    max-width: 46em;
-  }
+	.wrapper {
+	    max-width: 46em;
+	}
+	  
+	.feed-title-excerpt-block {
+	    width: 100%;
+	    cursor: pointer;
+	    border-top: 1px solid #f7f7f7;
+	    border-bottom: 1px solid #f7f7f7;
+	}
+	
+	.feed-title-excerpt-block:hover {
+	    background-color: #f7f7f7;
+	}
+	
+	.feed-title {
+	     color: #555555;
+	    margin-left: 20px;
+	    margin-right: 50px;
+	    font-size: 16px;
+	    font-family:  Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	    font-weight: 600;
+	}
+	
+	.feed-excerpt{
+	    color: #555555;
+	    margin-top: -12px;
+	    margin-left: 20px !important;
+	    margin-right: 30px;
+	    font-family:  'IBM Plex Sans', Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	    font-size: 15px;
+	}
+	
+	.tags {
+	    list-style: none;
+	    margin: 0;
+	    overflow: hidden; 
+	    padding: 0;
+	}
+	
+	.tags li {
+	    float: left; 
+	}
+	
+	.tag {
+	    color: #555555;
+	    background: #f7f7f7;
+	    text-decoration: none;
+	    display: inline-block;
+	    padding: 0 12px;
+	    border-radius: 32px;
+	    height: auto;
+	    vertical-align: middle;
+	    font-family:  Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	    font-weight: normal !important;
+	    font-size: 13px;
+	}
 </style>

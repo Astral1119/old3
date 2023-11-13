@@ -57,4 +57,15 @@ tags:
 	    border-bottom: 1px solid #d9d9d9;
 	    color: #1a1a1a;
 	}
+	body {
+    box-sizing: content-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    margin: 0 auto;
+    line-height: 1.7;
+    padding: 4vh 6vw;
+    overflow-x: hidden;
+    color: #333;
+    font-size: 1rem;
+    max-width: 63em;
+	}
 </style>

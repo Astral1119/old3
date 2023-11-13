@@ -2,7 +2,17 @@
 ---
 
 [
-  {% for note in site.notes.blog %}
+  {% for post in site.posts %}
+    {
+
+      "title"    : "{{ post.title | strip_html | escape }}",
+      "url"      : "{{ post.url }}",
+      "content"  : {{ post.content | strip_html | strip_newline | strip | jsonify }}
+
+    },
+  {% endfor %}
+
+  {% for note in site.notes %}
     {
 
       "title"    : "{{ note.title | strip_html | escape }}",

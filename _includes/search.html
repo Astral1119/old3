@@ -1,0 +1,79 @@
+<header>
+    <div class="searchbar search-container">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <label for="search-input"></label>
+        <input type="text" oninput="changeResultContainerDisp(this.value)" id="search-input" autocomplete="off" placeholder="Search..."/>
+        <ul id="results-container"></ul>
+    </div>
+    <script src="/assets/js/simple-jekyll-search.min.js"></script>
+    <script>
+        function changeResultContainerDisp(val) {
+            if (val) {
+                document.getElementById("results-container").style.display = "block";
+                document.getElementById("search-input").addEventListener('blur', function() {
+                    document.addEventListener('click', function(event) {
+                        var isClickInside = document.getElementById("results-container").contains(event.target);
+                        if (!isClickInside) {
+                            document.getElementById("results-container").style.display = "none";
+                        }
+                    })
+                })
+            }  else {
+                document.getElementById("results-container").style.display = "none";
+            }
+        }
+        var sjs = SimpleJekyllSearch({
+                    searchInput: document.getElementById('search-input'),
+                    resultsContainer: document.getElementById('results-container'),
+                    json: '/search.json',
+                    searchResultTemplate: '<li class="search_res" style="list-style: none;"><a href="{{ site.url }}{url}" style="text-decoration: none; color: #555555;"><p style="font-size: 1.0rem; font-family: "Inter !important"; font-weight: 600;">{title}</p></a></li>',
+                    noResultsText: 'No results found',
+                    fuzzy: false,
+                    limit: 4
+                    })
+    </script>
+</header>
+
+
+<style>
+    .searchbar input[type="text"] {
+        position: relative;
+        padding-left: 50px;
+        box-sizing : border-box;
+        width: 100%;
+        height: 40px;
+        border: 0px;
+        font-family:  Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+        color: #555;
+        font-size: 18px;
+        border-bottom: 1px solid #f7f7f7;
+        background-color: #f7f7f7;
+    }
+    .searchbar i {
+        position: absolute;
+        vertical-align: middle;
+        margin-top: -2px;
+        padding-left: 20px;
+        color: #888;
+        padding-top: 12.5px;
+        z-index: 1;
+    }
+    
+    .searchbar input[type="text"]:focus {
+        border-color: #f7f7f7;
+        box-shadow: 0 0 8px 0 #A7D0EB;
+    }
+    
+    .searchbar input[type=text]:hover {
+        background-color: white;
+    }
+    
+    .searchbar input[type=text]:active,
+    .searchbar input[type=text]:focus {
+        background-color: white;
+        outline: none;
+    }
+    #results-container {
+        display: none;
+    }
+</style>

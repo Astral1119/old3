@@ -18,8 +18,12 @@ tags:
 			json: '/search.json'
 			searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
 		})
+		const source = document.getElementById('search-input');
+		source. addEventListener('input',inputHandler);
+		const inputHandler = function(e) {
+			sjs(e.target.value);
+		}
 	</script>
-	
 <\div>
 
 <div class = "display">

@@ -48,4 +48,5 @@ This section will go over each.
 
 ### Useful Techniques
 
-There are various ways one can use QUERY that do 
+There are various ways one can use QUERY. Here is a short list.
+

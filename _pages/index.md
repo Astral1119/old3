@@ -1,95 +1,201 @@
 ---
-layout: page
+layout:
 title: Home
 id: home
 permalink: /
 ---
 
-# Welcome! 🌱
+<div id="menu">
+  <div id="menu-items">
+    <!-- I made these divs instead of links so you can click on mobile to view the effect -->
+    <div class="menu-item" href="/documentation">Documentation</div>
+    <div class="menu-item" href="/blog">Blog</div>
+    <div class="menu-item" href="/about">About</div>
+    <div class ="menu-item" href = "/about">Contact Me</div>
+  </div>
+  <div id="menu-background-pattern"></div>
+  <div id="menu-background-image"></div>
+</div>
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Welcome to the [[about|The Astral Café]]!
-</p>
 
-This is a digital garden meant to serve as both a personal blog and a resource for Google Sheets users.
+<script>
+	const menu = document.getElementById("menu");
 
-<strong>Recently updated notes</strong>
-
-<ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-  {% for item in recent_notes limit: 5 %}
-    <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
-            <a href="{{ item.url }}" style="text-decoration: none; color: #555555;">
-            {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
-                <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
-                    <li style="padding: 0 5px; border-radius: 10px;" class="tag"><b>Status: </b>{{item.status | capitalize }}</li>
-                </ul>
-                <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
-            {%- else -%}
-                <p class="feed-title">{{ item.title }}</p>
-            {%- endif -%}
-                <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 200}}</p>
-            </a>
-        </div>
-  {% endfor %}
-</ul>
+	Array.from(document.getElementsByClassName("menu-item"))
+	  .forEach((item, index) => {
+	    item.onmouseover = () => {
+	      menu.dataset.activeIndex = index;
+	    }
+	  });
+</script>
 
 <style>
 	.wrapper {
 	    max-width: 46em;
 	}
 	  
-	.feed-title-excerpt-block {
-	    width: 100%;
-	    cursor: pointer;
-	    border-top: 1px solid #f7f7f7;
-	    border-bottom: 1px solid #f7f7f7;
+	.fbody {
+	  background-color: rgb(20, 20, 20);
+	  margin: 0px;
+	}
+
+	#menu {  
+	  align-items: center;
+	  display: flex;
+	  height: 100vh;
+	  width: 100vw;
 	}
 	
-	.feed-title-excerpt-block:hover {
-	    background-color: #f7f7f7;
+	#menu-items {
+	  margin-left: clamp(4rem, 20vw, 48rem);
+	  position: relative;
+	  z-index: 2;
 	}
 	
-	.feed-title {
-	     color: #555555;
-	    margin-left: 20px;
-	    margin-right: 50px;
-	    font-size: 16px;
-	    font-family:  Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	    font-weight: 600;
+	#menu[data-active-index="0"] > #menu-background-pattern {
+	  background-position: 0% -25%;
 	}
 	
-	.feed-excerpt{
-	    color: #555555;
-	    margin-top: -12px;
-	    margin-left: 20px !important;
-	    margin-right: 30px;
-	    font-family:  'IBM Plex Sans', Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	    font-size: 15px;
+	#menu[data-active-index="1"] > #menu-background-pattern {
+	  background-position: 0% -50%;
 	}
 	
-	.tags {
-	    list-style: none;
-	    margin: 0;
-	    overflow: hidden; 
-	    padding: 0;
+	#menu[data-active-index="2"] > #menu-background-pattern {
+	  background-position: 0% -75%;
 	}
 	
-	.tags li {
-	    float: left; 
+	#menu[data-active-index="3"] > #menu-background-pattern {
+	  background-position: 0% -100%;
 	}
 	
-	.tag {
-	    color: #555555;
-	    background: #f7f7f7;
-	    text-decoration: none;
-	    display: inline-block;
-	    padding: 0 12px;
-	    border-radius: 32px;
-	    height: auto;
-	    vertical-align: middle;
-	    font-family:  Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	    font-weight: normal !important;
-	    font-size: 13px;
+	#menu[data-active-index="0"] > #menu-background-image {
+	  background-position: center 45%;
+	}
+	
+	#menu[data-active-index="1"] > #menu-background-image {
+	  background-position: center 50%;
+	}
+	
+	#menu[data-active-index="2"] > #menu-background-image {
+	  background-position: center 55%;
+	}
+	
+	#menu[data-active-index="3"] > #menu-background-image {
+	  background-position: center 60%;
+	}
+	
+	#menu-background-pattern {
+	  background-image: radial-gradient(
+	    rgba(255, 255, 255, 0.1) 9%, 
+	    transparent 9%
+	  );
+	  background-position: 0% 0%;
+	  background-size: 12vmin 12vmin;
+	  height: 100vh;
+	  left: 0px;
+	  position: absolute;
+	  top: 0px;
+	  transition: opacity 800ms ease, 
+	    background-size 800ms ease,
+	    background-position 800ms ease;
+	  width: 100vw;
+	  z-index: 1;
+	}
+	
+	#menu-background-image {
+	  background-image: url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	  background-position: center 40%;
+	  background-size: 110vmax;
+	  height: 100%;
+	  left: 0px;  
+	  opacity: 0.15;
+	  position: absolute;
+	  top: 0px;
+	  transition: opacity 800ms ease,
+	    background-size 800ms ease,
+	    background-position 800ms ease;
+	  width: 100%;
+	  z-index: 0;
+	}
+	
+	#menu-items:hover ~ #menu-background-pattern {
+	  background-size: 11vmin 11vmin;
+	  opacity: 0.5;
+	}
+	
+	#menu-items:hover ~ #menu-background-image {
+	  background-size: 100vmax;
+	  opacity: 0.1;
+	}
+	
+	#menu-items:hover > .menu-item {
+	  opacity: 0.3;
+	}
+	
+	#menu-items:hover > .menu-item:hover {
+	  opacity: 1; 
+	}
+	
+	.menu-item {
+	  color: white;
+	  cursor: pointer;
+	  display: block;
+	  font-family: 'Ibarra Real Nova', serif;
+	  font-size: clamp(3rem, 8vw, 8rem);
+	  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+	  text-decoration: none;
+	  transition: opacity 400ms ease;
+	}
+	
+	/* -- YouTube Link Styles -- */
+	
+	body.menu-toggled > .meta-link > span {
+	  color: rgb(30, 30, 30);
+	}
+	
+	#source-link {
+	  bottom: 60px;
+	}
+	
+	#source-link > i {
+	  color: rgb(94, 106, 210);
+	}
+	
+	#yt-link > i {
+	  color: rgb(239, 83, 80);
+	}
+	
+	.meta-link {
+	  align-items: center;
+	  backdrop-filter: blur(3px);
+	  background-color: rgba(255, 255, 255, 0.05);
+	  border: 1px solid rgba(255, 255, 255, 0.1);
+	  border-radius: 6px;
+	  bottom: 10px;
+	  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+	  cursor: pointer;  
+	  display: inline-flex;
+	  gap: 5px;
+	  left: 10px;
+	  padding: 10px 20px;
+	  position: fixed;
+	  text-decoration: none;
+	  transition: background-color 400ms, border-color 400ms;
+	  z-index: 10000;
+	}
+	
+	.meta-link:hover {
+	  background-color: rgba(255, 255, 255, 0.1);
+	  border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.meta-link > i, .meta-link > span {
+	  height: 20px;
+	  line-height: 20px;
+	}
+	
+	.meta-link > span {
+	  color: white;
+	  font-family: "Rubik", sans-serif;
 	}
 </style>

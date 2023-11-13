@@ -22,7 +22,7 @@ tags:
 
     {% include footer.html %}
 
-    <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
     <script>
       window.simpleJekyllSearch = new SimpleJekyllSearch({

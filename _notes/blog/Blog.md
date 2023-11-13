@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: other
 title: Blog Homepage
 excerpt: Blog Homepage
 permalink: /blog

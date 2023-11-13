@@ -34,10 +34,14 @@ collections:
 
 defaults:
   - scope:
-      path: "**/*"
+      path: "**/about.md"
     values:
       layout: "default"
   - scope:
-      path: "_notes/**/*.md"
+      path: "_notes/blog/**/*.md"
+    values:
+      layout: "note"
+  - scope:
+      path: "_notes/docs/**/*.md"
     values:
       layout: "note"

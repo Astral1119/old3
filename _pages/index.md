@@ -1,5 +1,5 @@
 ---
-layout:
+layout: other
 title: Home
 id: home
 permalink: /

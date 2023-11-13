@@ -118,5 +118,6 @@ permalink: /
 		opacity: 1 !important;
 		max-width: 25%
 		max-height: auto;
+		z-index: 1;
 	}
 </style>

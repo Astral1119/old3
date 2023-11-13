@@ -6,7 +6,7 @@ permalink: /
 ---
 
 <div id="menu">
-  <img src="/assets/img/logo.gif">
+  <img id="logo" src="/assets/img/logo.gif">
   <div id="menu-items">
     <div class="menu-item">[[Documentation]]</div>
     <div class="menu-item">[[Blog]]</div>
@@ -113,5 +113,8 @@ permalink: /
 	body { 
 		overflow: hidden; /* Hide scrollbars */
 		margin: 0px !important;
+	}
+	.logo {
+		opacity: 1;
 	}
 </style>

@@ -20,15 +20,11 @@ tags:
 			searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
 		})
 		const source = document.getElementById('search-input');
-		source. addEventListener('input',inputHandler);
+		source.addEventListener('input',inputHandler);
 		const inputHandler = function(e) {
 			sjs.search(e.target.value);
 		}
-	</script>
-<\div>
-
-<p>foo bar</p>
-
+	</script><\div>
 <div class = "display">
 	<ul>
 	  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}

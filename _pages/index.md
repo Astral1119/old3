@@ -7,7 +7,6 @@ permalink: /
 
 <div id="menu">
   <div id="menu-items">
-    <!-- I made these divs instead of links so you can click on mobile to view the effect -->
     <div class="menu-item">[[Documentation]]</div>
     <div class="menu-item">[[Blog]]</div>
     <div class="menu-item">[[About]]</div>
@@ -42,7 +41,7 @@ permalink: /
 	}
 	
 	#menu-items {
-	  margin-left: clamp(4rem, 20vw, 32rem);
+	  margin-left: clamp(1rem, 20vw, 32rem);
 	  position: relative;
 	  z-index: 2;
 	}
@@ -106,4 +105,5 @@ permalink: /
 		color: white;
 		text-decoration: none;
 	}
+	body {  overflow: hidden; /* Hide scrollbars */}
 </style>

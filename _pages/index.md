@@ -114,7 +114,7 @@ permalink: /
 		overflow: hidden; /* Hide scrollbars */
 		margin: 0px !important;
 	}
-	.logo {
+	img {
 		opacity: 1 !important;
 		max-width: 25%
 		max-height: auto;

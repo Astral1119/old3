@@ -49,4 +49,12 @@ tags:
 	.display {
 		margin-left: 200px;
 	}
+	
+	a {
+	    transition: background 300ms;
+	    padding: 0 0.1em;
+	    text-decoration: none;
+	    border-bottom: 1px solid #d9d9d9;
+	    color: #1a1a1a;
+	}
 </style>

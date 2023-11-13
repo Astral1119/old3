@@ -90,7 +90,10 @@ permalink: /
 	}
 	
 	#menu-items:hover > .menu-item:hover {
-	  opacity: 1; 
+	  opacity: 1;
+	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 	}
 	
 	.menu-item {

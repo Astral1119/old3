@@ -8,10 +8,10 @@ permalink: /
 <div id="menu">
   <div id="menu-items">
     <!-- I made these divs instead of links so you can click on mobile to view the effect -->
-    <div class="menu-item" href="/documentation">[[Documentation]]</div>
-    <div class="menu-item" href="/blog">[[Blog]]</div>
-    <div class="menu-item" href="/about">[[About]]</div>
-    <div class ="menu-item" href = "/about">[[About|Contact Me]]</div>
+    <div class="menu-item">[[Documentation]]</div>
+    <div class="menu-item">[[Blog]]</div>
+    <div class="menu-item">[[About]]</div>
+    <div class ="menu-item">[[About|Contact Me]]</div>
   </div>
   <div id="menu-background-image"></div>
 </div>
@@ -29,10 +29,6 @@ permalink: /
 </script>
 
 <style>
-	.wrapper {
-	    max-width: 46em;
-	}
-	  
 	.fbody {
 	  background-color: rgb(20, 20, 20);
 	  margin: 0px;
@@ -46,7 +42,7 @@ permalink: /
 	}
 	
 	#menu-items {
-	  margin-left: clamp(4rem, 20vw, 48rem);
+	  margin-left: clamp(4rem, 20vw, 32rem);
 	  position: relative;
 	  z-index: 2;
 	}
@@ -106,7 +102,7 @@ permalink: /
 	  transition: opacity 400ms ease;
 	}
 	
-	#menu-item:link {
+	.menu-item a {
 		color: white;
 		text-decoration: none;
 	}

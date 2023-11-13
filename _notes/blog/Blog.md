@@ -42,7 +42,7 @@ tags:
 		overflow-x: hidden;
 		padding-top: 10px;
 	}
-	.main {
+	.display {
 		margin-left: 200px;
 	}
 </style>

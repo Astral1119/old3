@@ -98,13 +98,16 @@ permalink: /
 	}
 	
 	.menu-item {
-	  color: white;
 	  cursor: pointer;
 	  display: block;
 	  font-family: 'Ibarra Real Nova', serif;
 	  font-size: clamp(3rem, 8vw, 8rem);
 	  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-	  text-decoration: none;
 	  transition: opacity 400ms ease;
+	}
+	
+	#menu-item:link {
+		color: white;
+		text-decoration: none;
 	}
 </style>

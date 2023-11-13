@@ -1,11 +1,8 @@
 ---
 title: The Crash Bug
 excerpt: Breaking Google Sheets with 17 characters.
-header:
-  teaser: assets/images/broken.jpg
 tags:
   - bugs
-toc: true
 date: 2023-02-14
 ---
 ### Update

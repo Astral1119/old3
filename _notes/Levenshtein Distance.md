@@ -1,14 +1,10 @@
 ---
 title: Levenshtein Distance Formula
 excerpt: Recreating the Levenshtein Distance Algorithm in Google Sheets in response to ztiaa's challenge.
-header:
-  teaser: assets/images/distance.jpg
 tags:
   - formula
-toc: true
 date: 2023-02-15
 ---
-
 ### Introduction
 
 This problem arose when [ztiaa](https://ztiaa.com/) challenged me to create a formula that calculates the Levenshtein distance between two strings. In simple terms, the Levenshtein distance is how many edits it would take to get from one string to another. It has a number of very nice applications in fuzzy matching, a topic on which I'll likely make additional posts on in the future.

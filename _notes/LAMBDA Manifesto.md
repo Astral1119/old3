@@ -4,11 +4,8 @@ excerpt: The most powerful function in Google Sheets.
 tags:
   - lambda
   - formula
-toc: true
-header: '{"teaser":"assets/images/sword.JPG"}'
 date: 2023-04-09
 ---
-
 ### Introduction
 
 This is not a tutorial. This is a rant.

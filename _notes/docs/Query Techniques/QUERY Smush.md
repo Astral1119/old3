@@ -5,7 +5,6 @@ tags:
 - function
 - technique
 - documentation
-date: 2023-11-12
 ---
 
 ### Introduction

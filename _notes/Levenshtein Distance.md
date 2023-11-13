@@ -3,7 +3,6 @@ title: Levenshtein Distance Formula
 excerpt: Recreating the Levenshtein Distance Algorithm in Google Sheets in response to ztiaa's challenge.
 tags:
   - formula
-date: 2023-02-15
 ---
 ### Introduction
 
@@ -29,7 +28,9 @@ Pretty simple, right? But the issue arises with the algorithm.
 
 Here's the mathematical definition Wikipedia provides:
 
+
 ![ldist Mathematical Definition](https://wikimedia.org/api/rest_v1/media/math/render/svg/70962a722b0b682e398f0ee77d60c714a441c54e)
+
 
 Now, I'm a high schooler who was never formally taught any of this stuff. It also doesn't help that very little of it is analogous to Google Sheets formulae. But I came across a very nice [Medium article by Ethan Nam](https://medium.com/@ethannam/understanding-the-levenshtein-distance-equation-for-beginners-c4285a5604f0) that helped illustrate the concept. I highly recommend giving it a read.
 

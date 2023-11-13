@@ -4,7 +4,6 @@ excerpt: The QUERY function
 tags:
   - function
   - documentation
-date: 2023-11-12
 ---
 ### Introduction
 

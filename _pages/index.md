@@ -4,7 +4,7 @@ title: Home
 id: home
 permalink: /
 ---
-
+<img src="/assets/img/logo.gif">
 <div id="menu">
   <div id="menu-items">
     <div class="menu-item">[[Documentation]]</div>

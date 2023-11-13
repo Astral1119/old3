@@ -115,6 +115,8 @@ permalink: /
 		margin: 0px !important;
 	}
 	.logo {
-		opacity: 1;
+		opacity: 1 !important;
+		max-width: 25%
+		max-height: auto;
 	}
 </style>

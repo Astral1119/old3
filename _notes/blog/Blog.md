@@ -5,6 +5,7 @@ excerpt: Blog Homepage
 permalink: /blog
 tags:
 ---
+
 <div id = "sidebar">
 	<nav>{% include nav.html %}</nav>
 	<!-- HTML elements for search -->
@@ -21,10 +22,12 @@ tags:
 		const source = document.getElementById('search-input');
 		source. addEventListener('input',inputHandler);
 		const inputHandler = function(e) {
-			sjs(e.target.value);
+			sjs.search(e.target.value);
 		}
 	</script>
 <\div>
+
+<p>foo bar</p>
 
 <div class = "display">
 	<ul>

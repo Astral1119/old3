@@ -8,12 +8,11 @@ permalink: /
 <div id="menu">
   <div id="menu-items">
     <!-- I made these divs instead of links so you can click on mobile to view the effect -->
-    <div class="menu-item" href="/documentation">Documentation</div>
-    <div class="menu-item" href="/blog">Blog</div>
-    <div class="menu-item" href="/about">About</div>
-    <div class ="menu-item" href = "/about">Contact Me</div>
+    <div class="menu-item" href="/documentation">[[Documentation]]</div>
+    <div class="menu-item" href="/blog">[[Blog]]</div>
+    <div class="menu-item" href="/about">[[About]]</div>
+    <div class ="menu-item" href = "/about">[[About|Contact Me]]</div>
   </div>
-  <div id="menu-background-pattern"></div>
   <div id="menu-background-image"></div>
 </div>
 
@@ -52,22 +51,6 @@ permalink: /
 	  z-index: 2;
 	}
 	
-	#menu[data-active-index="0"] > #menu-background-pattern {
-	  background-position: 0% -25%;
-	}
-	
-	#menu[data-active-index="1"] > #menu-background-pattern {
-	  background-position: 0% -50%;
-	}
-	
-	#menu[data-active-index="2"] > #menu-background-pattern {
-	  background-position: 0% -75%;
-	}
-	
-	#menu[data-active-index="3"] > #menu-background-pattern {
-	  background-position: 0% -100%;
-	}
-	
 	#menu[data-active-index="0"] > #menu-background-image {
 	  background-position: center 45%;
 	}
@@ -84,31 +67,14 @@ permalink: /
 	  background-position: center 60%;
 	}
 	
-	#menu-background-pattern {
-	  background-image: radial-gradient(
-	    rgba(255, 255, 255, 0.1) 9%, 
-	    transparent 9%
-	  );
-	  background-position: 0% 0%;
-	  background-size: 12vmin 12vmin;
-	  height: 100vh;
-	  left: 0px;
-	  position: absolute;
-	  top: 0px;
-	  transition: opacity 800ms ease, 
-	    background-size 800ms ease,
-	    background-position 800ms ease;
-	  width: 100vw;
-	  z-index: 1;
-	}
-	
 	#menu-background-image {
 	  background-image: url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
 	  background-position: center 40%;
 	  background-size: 110vmax;
+	  background-color: black;
 	  height: 100%;
 	  left: 0px;  
-	  opacity: 0.15;
+	  opacity: 0.7;
 	  position: absolute;
 	  top: 0px;
 	  transition: opacity 800ms ease,
@@ -118,14 +84,9 @@ permalink: /
 	  z-index: 0;
 	}
 	
-	#menu-items:hover ~ #menu-background-pattern {
-	  background-size: 11vmin 11vmin;
-	  opacity: 0.5;
-	}
-	
 	#menu-items:hover ~ #menu-background-image {
 	  background-size: 100vmax;
-	  opacity: 0.1;
+	  opacity: 0.6;
 	}
 	
 	#menu-items:hover > .menu-item {
@@ -145,57 +106,5 @@ permalink: /
 	  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
 	  text-decoration: none;
 	  transition: opacity 400ms ease;
-	}
-	
-	/* -- YouTube Link Styles -- */
-	
-	body.menu-toggled > .meta-link > span {
-	  color: rgb(30, 30, 30);
-	}
-	
-	#source-link {
-	  bottom: 60px;
-	}
-	
-	#source-link > i {
-	  color: rgb(94, 106, 210);
-	}
-	
-	#yt-link > i {
-	  color: rgb(239, 83, 80);
-	}
-	
-	.meta-link {
-	  align-items: center;
-	  backdrop-filter: blur(3px);
-	  background-color: rgba(255, 255, 255, 0.05);
-	  border: 1px solid rgba(255, 255, 255, 0.1);
-	  border-radius: 6px;
-	  bottom: 10px;
-	  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-	  cursor: pointer;  
-	  display: inline-flex;
-	  gap: 5px;
-	  left: 10px;
-	  padding: 10px 20px;
-	  position: fixed;
-	  text-decoration: none;
-	  transition: background-color 400ms, border-color 400ms;
-	  z-index: 10000;
-	}
-	
-	.meta-link:hover {
-	  background-color: rgba(255, 255, 255, 0.1);
-	  border: 1px solid rgba(255, 255, 255, 0.2);
-	}
-	
-	.meta-link > i, .meta-link > span {
-	  height: 20px;
-	  line-height: 20px;
-	}
-	
-	.meta-link > span {
-	  color: white;
-	  font-family: "Rubik", sans-serif;
 	}
 </style>

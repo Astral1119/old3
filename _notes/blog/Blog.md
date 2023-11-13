@@ -9,22 +9,37 @@ tags:
 <div id = "sidebar">
 	<nav>{% include nav.html %}</nav>
 	<!-- HTML elements for search -->
-	<input type="text" id="search-input" placeholder="Search blog posts..">
-	<ul id="results-container"></ul>
-	<!-- or without installing anything -->
-	<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js">
-		var sjs = SimpleJekyllSearch({
-			searchInput: document.getElementById('search-input'),
-			resultsContainer: document.getElementById('results-container'),
-			json: '/search.json'
-			searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
-		})
-		const source = document.getElementById('search-input');
-		source.addEventListener('input',inputHandler);
-		const inputHandler = function(e) {
-			sjs.search(e.target.value);
-		}
-	</script><\div>
+	<div id="search-demo-container">
+      <input type="search" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+
+    <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+<\div>
+
+
+
 <div class = "display">
 	<ul>
 	  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}

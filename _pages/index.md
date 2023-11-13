@@ -4,8 +4,9 @@ title: Home
 id: home
 permalink: /
 ---
-<img src="/assets/img/logo.gif">
+
 <div id="menu">
+  <img src="/assets/img/logo.gif">
   <div id="menu-items">
     <div class="menu-item">[[Documentation]]</div>
     <div class="menu-item">[[Blog]]</div>
@@ -47,11 +48,11 @@ permalink: /
 	}
 	
 	#menu[data-active-index="0"] > #menu-background-image {
-	  background-position: center 45%;
+	  background-position: center 35%;
 	}
 	
 	#menu[data-active-index="1"] > #menu-background-image {
-	  background-position: center 50%;
+	  background-position: center 45%;
 	}
 	
 	#menu[data-active-index="2"] > #menu-background-image {
@@ -59,7 +60,7 @@ permalink: /
 	}
 	
 	#menu[data-active-index="3"] > #menu-background-image {
-	  background-position: center 60%;
+	  background-position: center 65%;
 	}
 	
 	#menu-background-image {

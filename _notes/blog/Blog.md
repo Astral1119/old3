@@ -36,7 +36,7 @@ tags:
         exclude: ['Welcome']
       })
     </script>
-<\div>
+</div>
 
 
 

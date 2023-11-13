@@ -2,7 +2,7 @@
 layout: none
 ---
 [
-  {% for post in site.posts %}
+  {% for post in site.notes.blog %}
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
@@ -13,7 +13,7 @@ layout: none
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
   ,
-  {% for page in site.pages %}
+  {% for page in site.notes.blog %}
    {
      {% if page.title != nil %}
         "title"    : "{{ page.title | escape }}",

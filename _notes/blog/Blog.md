@@ -34,6 +34,15 @@ tags:
 		padding-top: 10px;
 	}
 	
+	.search_res {
+	  color: white;
+	  cursor: pointer;
+	  display: block;
+	  font-family: 'Ibarra Real Nova', serif;
+	  font-size: clamp(1rem, 4rem, 3rem);
+	  transition: opacity 400ms ease;
+	}
+	
 	.search_res:hover > .search_res {
 	  opacity: 0.3;
 	}
@@ -43,14 +52,6 @@ tags:
 	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
 	  -webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
-	}
-	
-	.search_res {
-	  cursor: pointer;
-	  display: block;
-	  font-family: 'Ibarra Real Nova', serif;
-	  font-size: clamp(1rem, 4rem, 3rem);
-	  transition: opacity 400ms ease;
 	}
 	
 	.display {

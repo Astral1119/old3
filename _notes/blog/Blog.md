@@ -49,8 +49,7 @@ tags:
 	  cursor: pointer;
 	  display: block;
 	  font-family: 'Ibarra Real Nova', serif;
-	  font-size: clamp(3rem, 5vw, 4rem);
-	  padding: clamp(0.25rem, 0.2vw, 1rem) clamp(1rem, 10vw, 16rem);
+	  font-size: clamp(1rem, 3vw, 2rem);
 	  transition: opacity 400ms ease;
 	}
 	

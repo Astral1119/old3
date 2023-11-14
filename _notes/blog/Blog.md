@@ -24,7 +24,7 @@ tags:
 	
 	.sidebar {
 		height: 100%;
-		width: 25rem;
+		width: 25rem !important;
 		position: fixed;
 		z-index: 1;
 		top: 0;
@@ -67,11 +67,11 @@ tags:
 	
 	a {
 	    transition: background 300ms;
-	    padding: 0 0.1em;
 	    text-decoration: none;
 	    border-bottom: 1px solid #d9d9d9;
 	    color: #1a1a1a;
 	}
+	
 	body {
 	    box-sizing: content-box;
 	    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;

@@ -42,13 +42,13 @@ tags:
 		z-index: 1;
 		top: 0;
 		left: 0;
-		background-color: #98bd95;
+		background-color: #5c544b;
 		overflow: auto;
 		padding-top: 10px;
 	}
 	
 	#results-container:hover > .menu-item {
-	  opacity: 0.3;
+	  opacity: 0.6;
 	}
 	
 	#results-container:hover > .menu-item:hover {
@@ -83,7 +83,9 @@ tags:
 	}
 	
 	nav a {
-	    color: #1a1a1a;
+	    background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 	    font-size: 2rem;
 	}
 	

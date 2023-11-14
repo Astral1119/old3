@@ -42,7 +42,7 @@ permalink: /
 	}
 	
 	#menu-items {
-	  margin-left: clamp(1rem, 20vw, 32rem);
+	  margin-left: clamp(1rem, 16vw, 20rem);
 	  position: relative;
 	  z-index: 2;
 	}
@@ -118,5 +118,6 @@ permalink: /
 		opacity: 1 !important;
 		max-width: 40%;
 		z-index: 1;
+		margin-left: 5%;
 	}
 </style>

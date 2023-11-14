@@ -76,15 +76,16 @@ tags:
 	}
 	
 	nav {
-		width: inherit;
+		width: 80%;
 		transition: background 300ms;
-	    margin: 0 auto;
+	    margin: 0 10%;
+	    text-align: center;
+	    padding: 10%;
 	}
 	
 	nav a {
 	    color: #1a1a1a;
-	    text-decoration: none;
-	    font-size: 1rem;
+	    font-size: 3rem;
 	}
 	
 	body {

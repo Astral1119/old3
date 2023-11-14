@@ -34,11 +34,11 @@ tags:
 		padding-top: 10px;
 	}
 	
-	.search_res:hover > .menu-item {
+	.search_res:hover > .search_res {
 	  opacity: 0.3;
 	}
 	
-	.search_res:hover > .menu-item:hover {
+	.search_res:hover > .search_res:hover {
 	  opacity: 1;
 	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
 	  -webkit-background-clip: text;

@@ -30,7 +30,7 @@ tags:
 		top: 0;
 		left: 0;
 		background-color: #98bd95;
-		overflow-x: hidden;
+		overflow: auto;
 		padding-top: 10px;
 	}
 	
@@ -51,11 +51,6 @@ tags:
 	  font-family: 'Ibarra Real Nova', serif;
 	  font-size: clamp(1rem, 4rem, 3rem);
 	  transition: opacity 400ms ease;
-	}
-	
-	.search_res a {
-		color: white;
-		text-decoration: none;
 	}
 	
 	.display {

@@ -78,9 +78,13 @@ tags:
 	nav {
 		width: inherit;
 		transition: background 300ms;
-	    text-decoration: none;
-	    border-bottom: 1px solid #d9d9d9;
+	    margin: 0 auto;
+	}
+	
+	nav a {
 	    color: #1a1a1a;
+	    text-decoration: none;
+	    font-size: 1rem;
 	}
 	
 	body {

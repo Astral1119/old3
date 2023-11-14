@@ -37,7 +37,7 @@ permalink: /
 	#menu {  
 	  align-items: center;
 	  display: flex;
-	  height: 100vh;
+	  height: 95vh;
 	  width: 100vw;
 	  flex-direction: column;
 	}
@@ -117,6 +117,7 @@ permalink: /
 	img {
 		opacity: 1 !important;
 		max-height: 25%;
+		max-width: 80%;
 		z-index: 1;
 	}
 </style>

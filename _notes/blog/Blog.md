@@ -18,11 +18,11 @@ tags:
 </div>
 
 <style>
-	.background-image {
+	#background-image {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
 	}
 	
-	.sidebar {
+	#sidebar {
 		height: 100%;
 		width: 25rem !important;
 		position: fixed;
@@ -34,11 +34,11 @@ tags:
 		padding-top: 10px;
 	}
 	
-	#search_res:hover > .menu-item {
+	.search_res:hover > .menu-item {
 	  opacity: 0.3;
 	}
 	
-	#search_res:hover > .menu-item:hover {
+	.search_res:hover > .menu-item:hover {
 	  opacity: 1;
 	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
 	  -webkit-background-clip: text;
@@ -63,10 +63,7 @@ tags:
 	
 	nav {
 		width: inherit;
-	}
-	
-	a {
-	    transition: background 300ms;
+		transition: background 300ms;
 	    text-decoration: none;
 	    border-bottom: 1px solid #d9d9d9;
 	    color: #1a1a1a;

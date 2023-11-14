@@ -12,12 +12,16 @@ tags:
 		{% include search.html %}
 	</div>
 	
-	<div class = "display">
-		<p>hi</p>
+	<div id = "display">
+		<div id = "background-image"></div>
 	</div>
 </div>
 
 <style>
+	.background-image {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	}
+	
 	.sidebar {
 		height: 100%;
 		width: 25rem;
@@ -29,10 +33,29 @@ tags:
 		overflow-x: hidden;
 		padding-top: 10px;
 	}
+	
+	#search_res:hover > .menu-item {
+	  opacity: 0.3;
+	}
+	
+	#search_res:hover > .menu-item:hover {
+	  opacity: 1;
+	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	}
+	
 	.search_res {
-		list-style: none;
+	  cursor: pointer;
+	  display: block;
+	  font-family: 'Ibarra Real Nova', serif;
+	  font-size: clamp(1rem, 4rem, 3rem);
+	  transition: opacity 400ms ease;
+	}
+	
+	.search_res a {
+		color: white;
 		text-decoration: none;
-		color: #555555;
 	}
 	
 	.display {
@@ -55,12 +78,12 @@ tags:
 	    color: #1a1a1a;
 	}
 	body {
-    box-sizing: content-box;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-    line-height: 1.7;
-    overflow-x: hidden;
-    color: #333;
-    font-size: 1rem;
-    max-width: 63em;
+	    box-sizing: content-box;
+	    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	    line-height: 1.7;
+	    overflow-x: hidden;
+	    color: #333;
+	    font-size: 1rem;
+	    max-width: 63em;
 	}
 </style>

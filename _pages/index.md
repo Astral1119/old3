@@ -42,7 +42,6 @@ permalink: /
 	}
 	
 	#menu-items {
-	  margin-left: clamp(1rem, 16vw, 20rem);
 	  position: relative;
 	  z-index: 2;
 	}
@@ -66,7 +65,7 @@ permalink: /
 	#menu-background-image {
 	  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
 	  background-position: center 40%;
-	  background-size: 110vmax;
+	  background-size: 100vmax;
 	  background-color: black;
 	  height: 100%;
 	  left: 0px; 
@@ -102,7 +101,7 @@ permalink: /
 	  display: block;
 	  font-family: 'Ibarra Real Nova', serif;
 	  font-size: clamp(3rem, 5vw, 4rem);
-	  padding: clamp(0.25rem, 0.2vw, 1rem) 0rem;
+	  padding: clamp(0.25rem, 0.2vw, 1rem) clamp(1rem, 10vw, 16rem);
 	  transition: opacity 400ms ease;
 	}
 	
@@ -116,8 +115,7 @@ permalink: /
 	}
 	img {
 		opacity: 1 !important;
-		max-width: 40%;
+		max-height: 25%;
 		z-index: 1;
-		margin-left: 5%;
 	}
 </style>

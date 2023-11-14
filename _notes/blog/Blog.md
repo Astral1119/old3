@@ -24,7 +24,7 @@ tags:
 	  background-size: 100vmax;
 	  background-color: black;
 	  height: 100%;
-	  left: 0px; 
+	  left: 25rem; 
 	  opacity: 0.7;
 	  position: absolute;
 	  top: 0px;
@@ -69,10 +69,6 @@ tags:
 	.menu-item a {
 		color: white;
 		text-decoration: none;
-	}
-	
-	.display {
-		margin-left: 25rem;
 	}
 	
 	.flex-container {

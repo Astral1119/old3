@@ -16,6 +16,7 @@ tags:
 		<div id = "background-image"></div>
 	</div>
 </div>
+{% include notes_graph.html %}
 
 <style>
 	#background-image {
@@ -97,5 +98,13 @@ tags:
 	    color: #333;
 	    font-size: 1rem;
 	    max-width: 63em;
+	}
+
+	#graph-wrapper {
+		position: fixed;
+	    bottom: 0;
+	    right: 0;
+	    width: 20%;
+	    height: 30%;
 	}
 </style>

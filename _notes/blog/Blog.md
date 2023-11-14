@@ -34,11 +34,11 @@ tags:
 		padding-top: 10px;
 	}
 	
-	.menu-items:hover > .menu-item {
+	#results-container:hover > .menu-item {
 	  opacity: 0.3;
 	}
 	
-	.menu-items:hover > .menu-item:hover {
+	#results-container:hover > .menu-item:hover {
 	  opacity: 1;
 	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
 	  -webkit-background-clip: text;

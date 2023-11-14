@@ -3,7 +3,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
         <label for="search-input"></label>
         <input type="text" oninput="changeResultContainerDisp(this.value)" id="search-input" autocomplete="off" placeholder="Search..."/>
-        <div id="menu-items"></div>
+        <ul id="results-container"></ul>
     </div>
     <script src="/assets/js/simple-jekyll-search.min.js"></script>
     <script>
@@ -26,7 +26,7 @@
                     searchInput: document.getElementById('search-input'),
                     resultsContainer: document.getElementById('results-container'),
                     json: '/search.json',
-                    searchResultTemplate: '<div class="menu-item"><a class="internal-link" href="{{ site.url }}{url}">>{title}</a></div>',
+                    searchResultTemplate: '<li class="menu-item"><a href="{{ site.url }}{url}">> {title}</a></li>',
                     noResultsText: 'No results found',
                     fuzzy: false,
                     limit: 5

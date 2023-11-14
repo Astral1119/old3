@@ -6,38 +6,21 @@ permalink: /blog
 tags:
 ---
 
-<div id = "sidebar">
-	<nav>{% include nav.html %}</nav>
-	{% include search.html %}
-</div>
-
-
-
-<div class = "display">
-	<ul>
-	  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-	  {% for item in recent_notes limit: 5 %}
-	    <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
-	            <a href="{{ item.url }}" style="text-decoration: none; color: #555555;">
-	            {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
-	                <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
-	                    <li style="padding: 0 5px; border-radius: 10px;" class="tag"><b>Status: </b>{{item.status | capitalize }}</li>
-	                </ul>
-	                <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
-	            {%- else -%}
-	                <p class="feed-title">{{ item.title }}</p>
-	            {%- endif -%}
-	                <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 200}}</p>
-	            </a>
-	        </div>
-	  {% endfor %}
-	</ul>
+<div id = "flex container">
+	<div id = "sidebar">
+		<nav>{% include nav.html %}</nav>
+		{% include search.html %}
+	</div>
+	
+	<div class = "display">
+		<p>hi</p>
+	</div>
 </div>
 
 <style>
 	.sidebar {
 		height: 100%;
-		width: 200px;
+		width: 25rem;
 		position: fixed;
 		z-index: 1;
 		top: 0;
@@ -46,8 +29,22 @@ tags:
 		overflow-x: hidden;
 		padding-top: 10px;
 	}
+	.search_res {
+		list-style: none;
+		text-decoration: none;
+		color: #555555;
+	}
+	
 	.display {
-		margin-left: 200px;
+		margin-left: 25rem;
+	}
+	
+	.flex-container {
+		display: flex;
+	}
+	
+	nav {
+		width: inherit;
 	}
 	
 	a {
@@ -60,9 +57,7 @@ tags:
 	body {
     box-sizing: content-box;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-    margin: 0 auto;
     line-height: 1.7;
-    padding: 4vh 6vw;
     overflow-x: hidden;
     color: #333;
     font-size: 1rem;

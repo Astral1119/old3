@@ -34,24 +34,29 @@ tags:
 		padding-top: 10px;
 	}
 	
-	.search_res {
-	  color: white;
-	  cursor: pointer;
-	  display: block;
-	  font-family: 'Ibarra Real Nova', serif;
-	  font-size: clamp(1rem, 4rem, 3rem);
-	  transition: opacity 400ms ease;
-	}
-	
-	.search_res:hover > .search_res {
+	.menu-items:hover > .menu-item {
 	  opacity: 0.3;
 	}
 	
-	.search_res:hover > .search_res:hover {
+	.menu-items:hover > .menu-item:hover {
 	  opacity: 1;
 	  background: -webkit-linear-gradient(135deg, #e3d09d, #b4e0bc);
 	  -webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
+	}
+	
+	.menu-item {
+	  cursor: pointer;
+	  display: block;
+	  font-family: 'Ibarra Real Nova', serif;
+	  font-size: clamp(3rem, 5vw, 4rem);
+	  padding: clamp(0.25rem, 0.2vw, 1rem) clamp(1rem, 10vw, 16rem);
+	  transition: opacity 400ms ease;
+	}
+	
+	.menu-item a {
+		color: white;
+		text-decoration: none;
 	}
 	
 	.display {

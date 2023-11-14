@@ -112,6 +112,7 @@ permalink: /
 		color: white;
 		text-decoration: none;
 	}
+	
 	body { 
 		overflow: hidden; /* Hide scrollbars */
 		margin: 0px !important;

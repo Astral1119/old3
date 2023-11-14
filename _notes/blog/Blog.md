@@ -78,14 +78,13 @@ tags:
 	nav {
 		width: 80%;
 		transition: background 300ms;
-	    margin: 0 10%;
 	    text-align: center;
 	    padding: 10%;
 	}
 	
 	nav a {
 	    color: #1a1a1a;
-	    font-size: 3rem;
+	    font-size: 2rem;
 	}
 	
 	body {

@@ -19,7 +19,20 @@ tags:
 
 <style>
 	#background-image {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	  background-position: center 40%;
+	  background-size: 100vmax;
+	  background-color: black;
+	  height: 100%;
+	  left: 0px; 
+	  opacity: 0.7;
+	  position: absolute;
+	  top: 0px;
+	  transition: opacity 800ms ease,
+	    background-size 800ms ease,
+	    background-position 800ms ease;
+	  width: 100%;
+	  z-index: 0;
 	}
 	
 	#sidebar {

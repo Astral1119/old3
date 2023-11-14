@@ -39,6 +39,8 @@ permalink: /
 	  display: flex;
 	  height: 95vh;
 	  width: 100vw;
+	  max-height: 100%;
+	  max-width: 100%;
 	  flex-direction: column;
 	}
 	

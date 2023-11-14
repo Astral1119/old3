@@ -69,9 +69,9 @@ permalink: /
 	  background-size: 110vmax;
 	  background-color: black;
 	  height: 100%;
-	  left: 0px;  
+	  left: 0px; 
 	  opacity: 0.7;
-	  position: relative;
+	  position: absolute;
 	  top: 0px;
 	  transition: opacity 800ms ease,
 	    background-size 800ms ease,

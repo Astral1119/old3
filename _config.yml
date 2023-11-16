@@ -22,7 +22,8 @@ relative_permalinks: false
 
 plugins:
   - jekyll-last-modified-at
-
+  - jekyll-toc
+  
 sass:
   sass_dir:          _sass
   style:            :compressed
@@ -45,3 +46,12 @@ defaults:
       path: "_notes/docs/**/*.md"
     values:
       layout: "note"
+
+    
+# TOC Settings
+toc:
+ min_level: 1
+ max_level: 3
+ list_class: toc
+ list_class: toc__list
+ sublist_class: toc__sublist

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article>
-  <div>
+  <div id = "header">
       <div id = "left">
         <h1>{{ page.title }}</h1>
         <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
@@ -49,8 +49,6 @@ layout: default
 
 <hr>
 
-<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
-
 <style>
     #left {
         left: 80%;
@@ -58,6 +56,11 @@ layout: default
 
     #right {
         aspect-ratio : 1 / 1;
-        width: 20%;
+        width: 20%
+    }
+    
+    #header {
+        display: flex;
+        flex-direction: row;
     }
 </style>

@@ -1,6 +1,6 @@
 ---
 title: The QUERY Function
-excerpt: The QUERY function
+blurb: The QUERY function
 tags:
   - function
   - documentation

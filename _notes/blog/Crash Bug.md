@@ -1,6 +1,6 @@
 ---
 title: The Crash Bug
-excerpt: Breaking Google Sheets with 17 characters.
+blurb: Breaking Google Sheets with 17 characters.
 tags:
   - bugs
 ---

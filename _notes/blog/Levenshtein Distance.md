@@ -1,6 +1,6 @@
 ---
 title: Levenshtein Distance Formula
-excerpt: Recreating the Levenshtein Distance Algorithm in Google Sheets in response to ztiaa's challenge.
+blurb: Recreating the Levenshtein Distance Algorithm in Google Sheets in response to ztiaa's challenge.
 tags:
   - formula
 ---

@@ -1,6 +1,6 @@
 ---
 title: Query Smush
-excerpt: 
+blurb: 
 tags: 
 - function
 - technique

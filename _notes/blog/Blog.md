@@ -1,7 +1,7 @@
 ---
 layout: other
 title: Blog Homepage
-excerpt: Blog Homepage
+blurb: Blog Homepage
 permalink: /blog
 tags:
 ---

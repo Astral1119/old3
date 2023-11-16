@@ -1,6 +1,6 @@
 ---
 title: Query Arithmetic
-excerpt: 
+blurb: 
 tags:
 - function
 - technique

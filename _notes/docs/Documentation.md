@@ -1,6 +1,6 @@
 ---
 title: Documentation Homepage
-excerpt: Documentation Homepage
+blurb: Documentation Homepage
 permalink: /documentation
 tags:
 ---

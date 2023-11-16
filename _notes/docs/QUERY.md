@@ -20,7 +20,7 @@ QUERY syntax is made up of two parts: the function syntax and the query syntax.
 QUERY(data, [query], [headers])
 ```
 
-* *`data` - The array to perform the query on.
+* `data` - The array to perform the query on.
     - Each column of `data` can only hold boolean, numeric (including date/time types), or string values.
     - In case there are multiple data types in a single column, the majority data type determines the data type of the column for query purposes. Minority data types are considered null values.
 

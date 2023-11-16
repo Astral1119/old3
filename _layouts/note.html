@@ -9,6 +9,9 @@ layout: default
       Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
+    <div id = "head-graph">
+        {% include notes_graph.html %}
+    </div>
   </div>
   <div id="notes-entry-container">
     <content>
@@ -47,3 +50,12 @@ layout: default
 <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
 
 {% include notes_graph.html %}
+
+
+<style>
+    #head-graph {
+        aspect-ratio : 1 / 1;
+        height: 100%;
+        right: 100%;
+    }
+</style>

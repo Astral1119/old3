@@ -4,14 +4,16 @@ layout: default
 
 <article>
   <div>
-    <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
-      {% endif %}
-    </time>
-    <div id = "head-graph">
-        {% include notes_graph.html %}
-    </div>
+      <div id = "left">
+        <h1>{{ page.title }}</h1>
+        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
+          Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+          {% endif %}
+        </time>
+      </div>
+      <div id = "right">
+          {% include notes_graph.html %}
+      </div>
   </div>
   <div id="notes-entry-container">
     <content>
@@ -49,13 +51,13 @@ layout: default
 
 <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
 
-{% include notes_graph.html %}
-
-
 <style>
-    #head-graph {
+    #left {
+        left: 80%;
+    }
+
+    #right {
         aspect-ratio : 1 / 1;
-        height: 100%;
-        right: 100%;
+        width: 20%;
     }
 </style>

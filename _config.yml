@@ -42,10 +42,12 @@ defaults:
       path: "_notes/blog/**/*.md"
     values:
       layout: "note"
+      toc: true
   - scope:
       path: "_notes/docs/**/*.md"
     values:
       layout: "note"
+      toc: true
 
     
 # TOC Settings

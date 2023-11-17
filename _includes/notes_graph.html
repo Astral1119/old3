@@ -313,9 +313,16 @@
           if (selectedNode) {
             const xOffset = width / 2 - selectedNode.x;
             const yOffset = height / 2 - selectedNode.y;
+            const t = d3.event.transform;
 
-            g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
-            resize();
+            // Calculate the new translation based on the current transformation
+            const newTranslation = [
+              t.x + xOffset * t.k,
+              t.y + yOffset * t.k
+            ];
+
+            // Transition the transformation of the <g> element
+            g.transition().duration(1000).attr("transform", `translate(${newTranslation})`);
           }
         }
         centerOnNodeByPath(window.location.pathname);

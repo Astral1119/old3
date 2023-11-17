@@ -41,24 +41,7 @@
 
 <div id="graph-wrapper">
   <script>
-      const graphData = {% include notes_graph.json %}
-      let nodesData = graphData.nodes;
-      let linksData = graphData.edges;
-      
-      function centerOnNodeByPath(path) {
-        const selectedNode = nodesData.find(node => node.path === path);
-        if (selectedNode) {
-          const xOffset = width / 2 - selectedNode.x;
-          const yOffset = height / 2 - selectedNode.y;
-
-          g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
-        }
-      }
-
-      window.addEventListener("load", () => {
-        loadGraph();
-        centerOnNodeByPath(window.location.pathname);
-      });
+    window.addEventListener("load", loadGraph);
 
     function loadGraph() {
       var oScript = document.createElement("script");
@@ -320,6 +303,17 @@
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
+        
+        function centerOnNodeByPath(path) {
+          const selectedNode = nodesData.find(node => node.path === path);
+          if (selectedNode) {
+            const xOffset = width / 2 - selectedNode.x;
+            const yOffset = height / 2 - selectedNode.y;
+
+            g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
+          }
+        }
+        centerOnNodeByPath(window.location.pathname);
       }
     }
   </script>

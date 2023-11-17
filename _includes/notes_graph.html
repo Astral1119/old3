@@ -315,7 +315,7 @@
         const xOffset = width / 2 - selectedNode.x;
         const yOffset = height / 2 - selectedNode.y;
         g.transition().attr("transform", `translate(${xOffset},${yOffset})`);
-        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset).scale(0.5);
+        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
         console.log(xOffset);
         console.log(yOffset);
 

@@ -311,7 +311,9 @@
         const activeNode = nodesData.find((d) => d.path === window.location.pathname);
         
         console.log(activeNode);
-        
+        force.on("tick", function() {
+            activeNode.fx = w / 2;
+            activeNode.fy = h / 2;
       }
     }
   </script>

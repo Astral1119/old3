@@ -16,7 +16,9 @@ layout: default
       {{ content }}
     </content>
     <div id = "side">
-        {% include notes_graph.html %}
+        <div id = "graph" style = "aspect-ratio: 1;">
+            {% include notes_graph.html %}
+        </div>
         <side style="font-size: 0.9em">
             <div id="table-of-contents">
                 {% toc %}

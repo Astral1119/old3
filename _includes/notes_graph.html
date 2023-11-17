@@ -215,13 +215,12 @@
               const scale = d3.event.transform;
 
               // Combine the initial translation with the zoom transformation
-              const combinedTransform = customTranslation.translate(scale.x, scale.y).scale(scale.k);
+              const combinedTransform = scale.translate(scale.x, scale.y).scale(scale.k).translate(xOffset, yOffset);
 
               // Apply the combined transformation
               g.attr("transform", combinedTransform);
               
               console.log(scale);
-              console.log(customTranslation);
               console.log(combinedTransform);
               console.log(xOffset);
               console.log(yOffset);
@@ -315,7 +314,6 @@
         const xOffset = width / 2 - selectedNode.x;
         const yOffset = height / 2 - selectedNode.y;
         g.transition().attr("transform", `translate(${xOffset},${yOffset})`);
-        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
         console.log(xOffset);
         console.log(yOffset);
 

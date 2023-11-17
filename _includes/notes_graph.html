@@ -328,8 +328,8 @@
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
-        function centerOnNodeByPath(path) {
-                const selectedNode = nodesData.find(node => node.path === path);
+        function centerOnNodeByPath() {
+                const selectedNode = nodesData.find(node => node.path === window.location.pathname);
                 if (selectedNode) {
                     const xOffset = width / 2 - selectedNode.x;
                     const yOffset = height / 2 - selectedNode.y;
@@ -338,7 +338,7 @@
                     console.log(yOffset);
             }
         }
-        centerOnNodeByPath(window.location.pathname);
+        centerOnNodeByPath();
 
       }
     }

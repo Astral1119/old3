@@ -4,22 +4,19 @@ layout: default
 
 <article>
   <div id = "header">
-      <div id = "left">
-        <h1>{{ page.title }}</h1>
-        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-          Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
-          {% endif %}
-        </time>
-      </div>
-      <div id = "right">
-          {% include notes_graph.html %}
-      </div>
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+        {% if page.type != 'pages' %}
+        Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+        {% endif %}
+    </time>
   </div>
   <div id="notes-entry-container">
     <content>
       {{ content }}
     </content>
     <div id = "side">
+        {% include notes_graph.html %}
         <side style="font-size: 0.9em">
             <div id="table-of-contents">
                 {% toc %}
@@ -48,19 +45,3 @@ layout: default
 </article>
 
 <hr>
-
-<style>
-    #left {
-        width: 80%;
-    }
-
-    #right {
-        aspect-ratio : 1;
-        width: 20%
-    }
-    
-    #header {
-        display: flex;
-        flex-direction: row;
-    }
-</style>

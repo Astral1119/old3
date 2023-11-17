@@ -292,9 +292,36 @@
           ticked();
         };
 
-        const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
+        let storedTransform = d3.zoomIdentity; // Store the initial transform
+
+        let centerExecuted = false; // Track if centering is executed
+
+        function centerOnNodeByPath(path) {
+          if (!centerExecuted) {
+            const selectedNode = nodesData.find(node => node.path === path);
+            if (selectedNode) {
+              const xOffset = width / 2 - selectedNode.x;
+              const yOffset = height / 2 - selectedNode.y;
+
+              storedTransform = d3.zoomIdentity.translate(xOffset, yOffset);
+
+              g.attr("transform", `translate(${xOffset},${yOffset})`);
+              centerExecuted = true; // Mark centering as executed
+            }
+          }
+        }
+        // Handle zoom events to update the stored transform
+        const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", (event) => {
+          storedTransform = event.transform;
+          // Apply the current transform to 'g' or your graph element
+          g.attr("transform", event.transform);
+        });
 
         zoomHandler(svg);
+
+        // Call the centering function initially
+        centerOnNodeByPath(window.location.pathname);
+
         restart();
 
         // Change this bit to change home node
@@ -307,25 +334,6 @@
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
-        
-        function centerOnNodeByPath(path) {
-          const selectedNode = nodesData.find(node => node.path === path);
-          if (selectedNode) {
-            const xOffset = width / 2 - selectedNode.x;
-            const yOffset = height / 2 - selectedNode.y;
-            const t = d3.event.transform;
-
-            // Calculate the new translation based on the current transformation
-            const newTranslation = [
-              t.x + xOffset * t.k,
-              t.y + yOffset * t.k
-            ];
-
-            // Transition the transformation of the <g> element
-            g.transition().duration(1000).attr("transform", `translate(${newTranslation})`);
-          }
-        }
-        centerOnNodeByPath(window.location.pathname);
       }
     }
   </script>

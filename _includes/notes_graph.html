@@ -307,16 +307,16 @@
 
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
 
+        zoomHandler(svg);
+        restart();
+        
         const selectedNode = nodesData.find(node => node.path === window.location.pathname);
         const xOffset = width / 2 - selectedNode.x;
         const yOffset = height / 2 - selectedNode.y;
-
+        g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
         const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
-        
-        g.attr("transform", customTranslation);
-        
-        zoomHandler(svg);
-        restart();
+        console.log(xOffset);
+        console.log(yOffset);
 
         // Change this bit to change home node
         
@@ -328,18 +328,6 @@
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
-        function centerOnNodeByPath() {
-                const selectedNode = nodesData.find(node => node.path === window.location.pathname);
-                if (selectedNode) {
-                    const xOffset = width / 2 - selectedNode.x;
-                    const yOffset = height / 2 - selectedNode.y;
-                    g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
-                    console.log(xOffset);
-                    console.log(yOffset);
-            }
-        }
-        centerOnNodeByPath();
-
       }
     }
   </script>

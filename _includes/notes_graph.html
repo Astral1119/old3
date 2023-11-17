@@ -215,7 +215,7 @@
               const scale = d3.event.transform;
 
               // Combine the initial translation with the zoom transformation
-              const combinedTransform = customTranslation.scale(scale.k).translate(scale.x, scale.y);
+              const combinedTransform = customTranslation.translate(scale.x, scale.y).scale(scale.k);
 
               // Apply the combined transformation
               g.attr("transform", combinedTransform);

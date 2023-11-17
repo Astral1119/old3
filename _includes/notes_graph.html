@@ -210,6 +210,7 @@
         let text = g.append("g").attr("class", "text").selectAll(".text");
 
         const resize = () => {
+            zoomLevel = 1;
           if (d3.event) {
             const scale = d3.event.transform;
             zoomLevel = scale.k;
@@ -318,7 +319,7 @@
           }
         }
         centerOnNodeByPath(window.location.pathname);
-        ticked();
+        resize();
       }
     }
   </script>

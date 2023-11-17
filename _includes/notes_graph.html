@@ -224,6 +224,7 @@
               console.log(combinedTransform);
               console.log(xOffset);
               console.log(yOffset);
+              console.log(zoomIdentity);
 
               zoomLevel = scale.k;
           }
@@ -307,8 +308,8 @@
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
 
         const selectedNode = nodesData.find(node => node.path === window.location.pathname);
-        const xOffset = width / 2 - selectedNode.x / 2;
-        const yOffset = height / 2 - selectedNode.y / 2;
+        const xOffset = width / 2 - selectedNode.x;
+        const yOffset = height / 2 - selectedNode.y;
 
         const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
         

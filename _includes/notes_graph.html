@@ -282,22 +282,7 @@
 
           simulation.nodes(nodesData);
           simulation.force("link").links(linksData);
-          
-          const activeNode = nodesData.find((d) => d.path === window.location.pathname);
-
-          if (activeNode) {
-            simulation.alpha(0.3).restart(); // Restart the simulation with a low alpha value for a smooth transition
-
-            // Update the force center to focus on the active node
-            simulation.force(
-              "center",
-              d3
-                .forceCenter(width / 2, height / 2)
-                .x(activeNode.x) // Set the x-coordinate of the active node
-                .y(activeNode.y) // Set the y-coordinate of the active node
-            );
-          }
-          
+          simulation.alpha(1).restart();
           simulation.stop();
 
           for (let i = 0; i < TICKS; i++) {
@@ -305,6 +290,20 @@
           }
 
           ticked();
+          
+          const activeNode = nodesData.find((d) => d.path === window.location.pathname);
+
+          if (activeNode) {
+            simulation.alpha(0.3).restart();
+            
+            simulation.force(
+                "center",
+                d3
+                  .forceCenter(width / 2, height / 2)
+                  .x(activeNode.x)
+                  .y(activeNode.y)
+            );
+          }
         };
 
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);

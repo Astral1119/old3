@@ -308,20 +308,16 @@
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
         
-        function centerOnNodeByPath(path) {
-          const selectedNode = nodesData.find(node => node.path === path);
-          if (selectedNode) {
-            const xOffset = width / 2 - selectedNode.x;
-            const yOffset = height / 2 - selectedNode.y;
+        const selectedNode = nodesData.find(node => node.path === path);
+        const xOffset = width / 2 - selectedNode.x;
+        const yOffset = height / 2 - selectedNode.y;
 
-            g.attr("transform", `translate(${xOffset},${yOffset})`);
-            svg
-              .selectAll("circle")
-              .filter((_d, i, nodes) => d3.select(nodes[i]).attr("active"))
-              .attr("r", (d) => ACTIVE_RADIUS_FACTOR * nodeSize[d.id]);
-          }
-        }
-        centerOnNodeByPath(window.location.pathname);
+        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
+
+        const svg = d3.select("g");
+
+        svg.attr("transform", customTranslation);
+
       }
     }
   </script>

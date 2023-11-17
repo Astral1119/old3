@@ -307,9 +307,7 @@
         const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
 
         let loadDone = false;
-        
-        g.attr("transform", customTranslation);
-        
+                
         zoomHandler(svg);
         restart();
 

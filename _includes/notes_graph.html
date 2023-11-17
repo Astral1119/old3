@@ -215,6 +215,11 @@
             zoomLevel = scale.k;
             g.attr("transform", scale);
           }
+          else {
+            // If no event, maintain the initial transformation
+            g.attr("transform", customTranslation);
+          }
+
 
           const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);
 

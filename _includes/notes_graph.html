@@ -210,18 +210,15 @@
         let text = g.append("g").attr("class", "text").selectAll(".text");
 
         const resize = () => {
-          if (d3.event && loadDone) {
+          if (d3.event) {
             const scale = d3.event.transform;
-            zoomLevel = scale.k;
-            g.attr("transform", scale);
+
+            // Combine the initial translation with the zoom transformation
+            const combinedTransform = customTranslation.multiply(scale);
+
+            // Apply the combined transformation
+            g.attr("transform", combinedTransform);
           }
-          else {
-            // If no event, maintain the initial transformation
-            g.attr("transform", customTranslation);
-            loadDone = true;
-            zoomLevel = 1;
-          }
-          console.log(loadDone);
 
           const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);
 
@@ -301,6 +298,16 @@
 
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
 
+        const selectedNode = nodesData.find(node => node.path === window.location.pathname);
+        const xOffset = width / 2 - selectedNode.x;
+        const yOffset = height / 2 - selectedNode.y;
+
+        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
+
+        let loadDone = false;
+        
+        g.attr("transform", customTranslation);
+        
         zoomHandler(svg);
         restart();
 
@@ -314,16 +321,6 @@
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
-        
-        const selectedNode = nodesData.find(node => node.path === window.location.pathname);
-        const xOffset = width / 2 - selectedNode.x;
-        const yOffset = height / 2 - selectedNode.y;
-
-        const customTranslation = d3.zoomIdentity.translate(xOffset, yOffset);
-
-        let loadDone = false;
-        
-        g.attr("transform", customTranslation);
       }
     }
   </script>

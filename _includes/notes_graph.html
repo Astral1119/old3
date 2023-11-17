@@ -212,11 +212,11 @@
 
         const resize = () => {
           if (d3.event) {
-              const ident = d3.zoomIdentity;
+              const base = d3.zoomIdentity.transform(xOffset, yOffset);
               const scale = d3.event.transform;
 
               // Combine the initial translation with the zoom transformation
-              const combinedTransform = scale.translate(xOffset * scale.k, yOffset * scale.k);
+              const combinedTransform = base.transform(scale);
 
               // Apply the combined transformation
               g.attr("transform", combinedTransform);

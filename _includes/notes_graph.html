@@ -41,7 +41,7 @@
 
 <div id="graph-wrapper">
   <script>
-      function centerOnNodeByPath(path) {
+    function centerOnNodeByPath(path) {
         const selectedNode = nodesData.find(node => node.path === path);
         if (selectedNode) {
           const xOffset = width / 2 - selectedNode.x;
@@ -49,12 +49,12 @@
 
           g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
         }
-      }
+    }
 
-      window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
         loadGraph();
         centerOnNodeByPath(window.location.pathname);
-      });
+    });
 
     function loadGraph() {
       var oScript = document.createElement("script");

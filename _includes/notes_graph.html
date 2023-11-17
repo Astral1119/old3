@@ -41,7 +41,20 @@
 
 <div id="graph-wrapper">
   <script>
-    window.addEventListener("load", loadGraph);
+      function centerOnNodeByPath(path) {
+        const selectedNode = nodesData.find(node => node.path === path);
+        if (selectedNode) {
+          const xOffset = width / 2 - selectedNode.x;
+          const yOffset = height / 2 - selectedNode.y;
+
+          g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
+        }
+      }
+
+      window.addEventListener("load", () => {
+        loadGraph();
+        centerOnNodeByPath(window.location.pathname);
+      });
 
     function loadGraph() {
       var oScript = document.createElement("script");
@@ -243,14 +256,6 @@
             .attr("x2", (d) => d.target.x)
             .attr("y2", (d) => d.target.y);
             
-          const activeNode = nodesData.find((d) => d.path === window.location.pathname);
-          
-          d3
-            .forceCenter(width / 2, height / 2)
-            .x(activeNode.x)
-            .y(activeNode.y)
-        };
-
         const restart = () => {
           updateNodeSize();
           node = node.data(nodesData, (d) => d.id);

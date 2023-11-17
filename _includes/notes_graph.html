@@ -315,6 +315,7 @@
             const yOffset = height / 2 - selectedNode.y;
 
             g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
+            resize();
           }
         }
         centerOnNodeByPath(window.location.pathname);

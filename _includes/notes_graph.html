@@ -176,13 +176,6 @@
         element.setAttribute("height", graphWrapper.getBoundingClientRect().height);
         graphWrapper.appendChild(element);
 
-        const reportWindowSize = () => {
-          element.setAttribute("width", window.innerWidth);
-          element.setAttribute("height", window.innerHeight);
-        };
-
-        window.onresize = reportWindowSize;
-
         const svg = d3.select("svg");
         const width = Number(svg.attr("width"));
         const height = Number(svg.attr("height"));

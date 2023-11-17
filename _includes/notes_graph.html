@@ -294,22 +294,19 @@
 
         let storedTransform = d3.zoomIdentity; // Store the initial transform
 
-        let centerExecuted = false; // Track if centering is executed
-
         function centerOnNodeByPath(path) {
-          if (!centerExecuted) {
-            const selectedNode = nodesData.find(node => node.path === path);
-            if (selectedNode) {
-              const xOffset = width / 2 - selectedNode.x;
-              const yOffset = height / 2 - selectedNode.y;
+          const selectedNode = nodesData.find(node => node.path === path);
+          if (selectedNode) {
+            const xOffset = width / 2 - selectedNode.x;
+            const yOffset = height / 2 - selectedNode.y;
 
-              storedTransform = d3.zoomIdentity.translate(xOffset, yOffset);
+            // Update the stored transform
+            storedTransform = d3.zoomIdentity.translate(xOffset, yOffset);
 
-              g.attr("transform", `translate(${xOffset},${yOffset})`);
-              centerExecuted = true; // Mark centering as executed
-            }
+            g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
           }
         }
+
         // Handle zoom events to update the stored transform
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", (event) => {
           storedTransform = event.transform;

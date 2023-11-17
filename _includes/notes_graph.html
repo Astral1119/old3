@@ -202,6 +202,10 @@
           )
           .force("center", d3.forceCenter(width / 2, height / 2))
           .force("collision", d3.forceCollide().radius(80))
+          .force.on("tick", function() {
+              nodes[0].x = w / 2;
+              nodes[0].y = h / 2;
+          })
           .stop();
 
         const g = svg.append("g");
@@ -311,10 +315,6 @@
         const activeNode = nodesData.find((d) => d.path === window.location.pathname);
         
         console.log(activeNode);
-        d3.force.on("tick", function() {
-            activeNode.fx = w / 2;
-            activeNode.fy = h / 2;
-        })
       }
     }
   </script>

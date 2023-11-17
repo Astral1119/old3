@@ -334,6 +334,8 @@
                     const xOffset = width / 2 - selectedNode.x;
                     const yOffset = height / 2 - selectedNode.y;
                     g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
+                    console.log(xOffset);
+                    console.log(yOffset);
             }
         }
         centerOnNodeByPath(window.location.pathname);

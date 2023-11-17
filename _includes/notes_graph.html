@@ -311,9 +311,9 @@
         let centeredDone = false;
         const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", (event) => {
           if(!centeredDone) {
-              storedTransform = event.transform;
               // Apply the current transform to 'g' or your graph element
-              g.attr("transform", event.transform);
+              g.attr("transform", storedTransform);
+              centeredDone = true;
           }
           resize();
         });

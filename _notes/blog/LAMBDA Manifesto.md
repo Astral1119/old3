@@ -7,8 +7,6 @@ tags:
 ---
 ### Introduction
 
-This is not a tutorial. This is a rant.
-
 This manifesto is dedicated to `LAMBDA`, an egregiously undervalued function. Since its introduction on August 24, 2022, it has been relegated to use as a mere auxiliary to the `LAMBDA` Helper Functions, or LHFs. However, this reductionist perspective trivializes `LAMBDA` qua `LAMBDA` in its floccinaucinihilipilification. The objective, therefore, is to recast `LAMBDA` as the apotheosis of spreadsheet formulae in its own right.
 
 ### The Underestimation of LAMBDA

@@ -214,10 +214,10 @@
             const scale = d3.event.transform;
 
             // Combine the initial translation with the zoom transformation
-            const combinedTransform = customTranslation.multiply(scale);
+            g.attr("transform", customTranslation);
 
             // Apply the combined transformation
-            g.attr("transform", combinedTransform);
+            g.attr("transform", scale);
           }
 
           const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);

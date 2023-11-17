@@ -173,8 +173,15 @@
         const graphWrapper = document.getElementById('graph-wrapper')
         const element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         element.setAttribute("width", graphWrapper.getBoundingClientRect().width);
-        element.setAttribute("height", graphWrapper.getBoundingClientRect().height);
+        element.setAttribute("height", graphWrapper.getBoundingClientRect().);
         graphWrapper.appendChild(element);
+
+        const reportWindowSize = () => {
+          element.setAttribute("width", window.innerWidth);
+          element.setAttribute("height", window.innerHeight);
+        };
+
+        window.onresize = reportWindowSize;
 
         const svg = d3.select("svg");
         const width = Number(svg.attr("width"));
@@ -299,6 +306,21 @@
         function shorten(str, maxLen, separator = ' ') {
           if (str.length <= maxLen) return str;
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
+        }
+        
+        const activeNode = nodesData.find((d) => d.path === window.location.pathname);
+        
+        if (activeNode) {
+          simulation.alpha(0.3).restart(); // Restart the simulation with a low alpha value for a smooth transition
+
+          // Update the force center to focus on the active node
+          simulation.force(
+            "center",
+            d3
+              .forceCenter(width / 2, height / 2)
+              .x(activeNode.x) // Set the x-coordinate of the active node
+              .y(activeNode.y) // Set the y-coordinate of the active node
+          );
         }
       }
     }

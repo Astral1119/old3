@@ -210,7 +210,6 @@
         let text = g.append("g").attr("class", "text").selectAll(".text");
 
         const resize = () => {
-            zoomLevel = 1;
           if (d3.event) {
             const scale = d3.event.transform;
             zoomLevel = scale.k;
@@ -315,11 +314,14 @@
             const xOffset = width / 2 - selectedNode.x;
             const yOffset = height / 2 - selectedNode.y;
 
-            g.transition().duration(1000).attr("transform", `translate(${xOffset},${yOffset})`);
+            g.attr("transform", `translate(${xOffset},${yOffset})`);
+            svg
+              .selectAll("circle")
+              .filter((_d, i, nodes) => d3.select(nodes[i]).attr("active"))
+              .attr("r", (d) => ACTIVE_RADIUS_FACTOR * nodeSize[d.id]);
           }
         }
         centerOnNodeByPath(window.location.pathname);
-        resize();
       }
     }
   </script>

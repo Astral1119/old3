@@ -308,7 +308,7 @@
           return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
         }
         
-        const selectedNode = nodesData.find(node => node.path === path);
+        const selectedNode = nodesData.find(node => node.path === window.location.pathname);
         const xOffset = width / 2 - selectedNode.x;
         const yOffset = height / 2 - selectedNode.y;
 

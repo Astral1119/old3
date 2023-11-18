@@ -154,7 +154,7 @@ The `limit` clause is used to limit the number of returned rows. It can only a
 select Col1 offset 5
 ```
 
-The `offset` clause is used to skip a given number of first rows. If a [`limit`](https://developers.google.com/chart/interactive/docs/querylanguage#Limit) clause is used, `offset` is applied first: for example, `limit 15 offset 30` returns rows 31 through 45.
+The `offset` clause is used to skip a given number of first rows. If a [`limit`](#limit) clause is used, `offset` is applied first: for example, `limit 15 offset 30` returns rows 31 through 45.
 
 #### Label
 
@@ -164,7 +164,7 @@ select Col1 label Col1 'Name'
 
 The `label` clause is used to set the label for one or more columns. Note that you cannot use a label value in place of an ID in a query.
 
-Items in a `label` clause can be column identifiers, or the output of [aggregation functions](https://developers.google.com/chart/interactive/docs/querylanguage#aggregation_functions), [scalar functions](https://developers.google.com/chart/interactive/docs/querylanguage#scalar_functions), or [operators](https://developers.google.com/chart/interactive/docs/querylanguage#operators).
+Items in a `label` clause can be column identifiers, or the output of [aggregation functions](#aggregation-functions), [scalar functions](#scalar-functions), or [operators](#arithmetic-operators).
 
 #### Format
 
@@ -189,7 +189,7 @@ The `options` clause is used to control additional options for query execution
 
 #### Aggregation Functions
 
-Aggregation functions are passed a single column [identifier](https://developers.google.com/chart/interactive/docs/querylanguage#Identifiers), and perform an action across all values in each group (groups are specified by [group by](https://developers.google.com/chart/interactive/docs/querylanguage#Group_By) or [pivot](https://developers.google.com/chart/interactive/docs/querylanguage#Pivot) clauses, or all rows if those clauses are not used).
+Aggregation functions are passed a single column [identifier](#identifiers), and perform an action across all values in each group (groups are specified by [`group by`](#group-by) or [`pivot`](#pivot) clauses, or all rows if those clauses are not used).
 
 Aggregation functions can be used in `select`, `order by`, `label`, `format` clauses. They _cannot_ appear in `where`, `group by`, `pivot`, `limit`, `offset`, or `options` clauses.
 
@@ -205,7 +205,7 @@ Aggregation functions can be used in `select`, `order by`, `label`, `format`
 
 Scalar functions return literals by operating over zero or more parameters.
 
-Scalar functions can be used in any of the following clauses: [[QUERY#Select|select]], [[QUERY#Where|where]], [[QUERY#Group By|group by]], [[QUERY#Pivot|pivot]], [[QUERY#Order By|order by]], [[QUERY#Label|label]], and [[QUERY#Format|format]].
+Scalar functions can be used in any of the following clauses: [select](#select), [where](#Where), [group by](#group-by), [pivot](#pivot), [order by](#order-by), [label](#label), and [format](#format).
 
 |Name|   |
 |---|---|
@@ -261,4 +261,4 @@ Here is a short list of other resources you can use to learn about QUERY.
 3. [The r/sheets Wiki](https://www.reddit.com/r/sheets/wiki/formulas/#wiki_query)
 	1. Covers practical use with several examples.
 4. [ztiaa's BetterQuery](https://docs.google.com/spreadsheets/d/1HoVyY7AEiMxS18Pqpdt08sPsYZw1KQ7qVO0A1RGPwrc/edit?usp=drivesdk)
-	1. This is a community-made named function that adds a new way to specify [[QUERY#Identifiers|identifiers]] based on headers.
+	1. This is a community-made named function that adds a new way to specify [identifiers](#identifiers) based on headers.

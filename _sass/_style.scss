@@ -15,9 +15,14 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, 'IBM Plex Sans', sans
 .toc__list {
  border: 2px solid #eee;
  border-radius: #border-radius;
- line-height: 1.8rem;
+ line-height: 1.5rem;
  padding: 1rem 1.5rem;
- font-weight: 600;
+ font-weight: 300;
+}
+
+.toc__sublist {
+ padding-inline-start: 20px;
+ opacity: 50%;
 }
 
 .toc__sublist li {

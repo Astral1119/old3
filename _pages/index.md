@@ -6,7 +6,7 @@ permalink: /
 ---
 
 <div id="menu">
-  <img id="logo" src="/assets/img/logo.gif">
+  <img id="logo" src="/assets/img/logo.gif" alt="The Astral Café">
   <div id="menu-items">
     <div class="menu-item">[[Documentation]]</div>
     <div class="menu-item">[[Blog]]</div>
@@ -66,7 +66,7 @@ permalink: /
 	}
 	
 	#menu-background-image {
-	  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("https://cdnb.artstation.com/p/assets/images/images/058/720/667/4k/jen-ingertila-larry-s-house-lined-final.jpg");
+	  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url("../assets/homepagebackground.jpeg");
 	  background-position: center 40%;
 	  background-size: 100vmax;
 	  background-color: black;

@@ -4,7 +4,7 @@ blurb: Why spreadsheet experts abhor your Pokédex.
 tags:
   - best practice
   - tips
-permalink: /pokemon
+permalink: /gaming
 ---
 ### Introduction
 

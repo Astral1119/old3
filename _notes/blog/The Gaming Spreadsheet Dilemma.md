@@ -8,7 +8,7 @@ permalink: /gaming
 ---
 ### Introduction
 
-Perhaps you've been playing your video game for a month, a year, a decade. Eventually, you decide that there must be a better way of farming a resource or calculating damage or storing crafting recipes or documenting every collectable or whatever else and so you turn to spreadsheets. Wonderful.
+Perhaps you've been playing your video game for a month, a year, a decade. Eventually, you decide that there must be a better way of farming a resource or calculating damage or storing crafting recipes or documenting every collectable or whatever else. Maybe you saw someone else use a spreadsheet for the kind of thing and were drawn in by the dropdowns and images and nice-looking layouts. Either way, you decide you'd like to use Google Sheets. Wonderful.
 
 But, you don't know where to start. So you scour the internet for help and somehow have ended up here, probably due to someone very smart on a help forum telling you that what you're attempting isn't feasible and here's a list of reasons why.
 
@@ -42,7 +42,7 @@ This issue is pretty common, especially if your project is already operating. Ho
 
 Maybe you're out there being proactive, looking at spreadsheets people have made for other video games. Maybe you're looking at tutorials and piecing stuff together. That's great. It's a shame that so much of the material isn't applicable.
 
-Existing video game spreadsheets are often problematic for the very reasons listed in this post, so it should come as no surprise that relying on other video game spreadsheets as references can be ultimately detrimental.
+Existing video game spreadsheets are often problematic for the very reasons listed in this post, so it should come as no surprise that relying on other video game spreadsheets as references can be ultimately detrimental. If you're asking for help implementing features you've seen on other spreadsheets, this typically leads to a torrent of questions that many helpers are unwilling to subject themselves to.
 
 The thing about spreadsheet tutorials is that they are very often designed for financial and professional use. When it comes to interpreting game mechanics or developing complex formulae, they have little to offer—because that's not the target demographic. Despite this, people very often try to MacGyver an ad hoc solution that is nigh-opaque to anyone else. This idea plays back into how [[The Gaming Spreadsheet Dilemma#Gamers Don't Spreadsheet|gamers don't spreadsheet]]. This is not to say that tutorials are not useful in a general sense—just that relying entirely on them is ultimately problematic.
 

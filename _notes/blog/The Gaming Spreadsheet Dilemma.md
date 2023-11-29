@@ -18,7 +18,7 @@ Within Google Sheets forums, not all spreadsheets are created equally. Spreadshe
 
 Gamers are generally not familiar with what 'best practice' constitutes or how to use proper data structures. Likewise, gamers don't know how the conventions of asking questions in a help forum or how to navigate channels of communication. This makes for an altogether difficult experience for any volunteer who deigns to assist.
 
-Frequently, gamers will ask for features that can't be achieved in spreadsheets. They don't know its limitations, and frankly there *is* a point where spreadsheets are the wrong tool of choice. As my good friend [tomf](https://www.reddit.com/user/6745408/) remarks, "it all boils down to 'sheets isn't a website.'" Not knowing the limits of spreadsheets is problematic when asking for help, and understandably many volunteers don't appreciate being asked the impossible.
+Frequently, gamers will ask for features that can't be achieved in spreadsheets. They don't know its limitations, and frankly there *is* a point where spreadsheets are the wrong tool of choice. As my good friends [tomf](https://www.reddit.com/user/6745408/) and [Matty P. King](https://support.google.com/profile/1863769?sjid=13831717049724841290-NC) remark, "it all boils down to 'sheets isn't a website.'" Not knowing the limits of spreadsheets is problematic when asking for help, and understandably many volunteers don't appreciate being asked the impossible.
 
 ### Games are Big Projects
 

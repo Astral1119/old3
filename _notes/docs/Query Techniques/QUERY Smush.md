@@ -2,7 +2,6 @@
 title: Query Smush
 blurb: 
 tags: 
-- function
 - technique
 - documentation
 - query
@@ -10,7 +9,7 @@ tags:
 
 ### Introduction
 
-In the days before [[BYCOL]] and other [[LAMBDA Helper Functions]], if we wanted to concatenate the vectors of an array, we would have to use a technique known as Query Smush. It takes advantage of how the header argument of [[QUERY]] combines data. While the same functionality can be achieved in a more intuitive way using [[LAMBDA Helper Functions|LHFs]], it does not count against [[LAMBDA limits]].
+In the days before [[BYCOL]] and other [[LAMBDA Helper Functions]], if we wanted to concatenate the vectors of an array, we would have to use a technique known as Query Smush. It takes advantage of how the header argument of [[QUERY]] combines data. While the same functionality can be achieved in a more intuitive way using [[LAMBDA Helper Functions|LHFs]], it does not count against [[Calculation Limits]].
 
 ### Syntax
 
